@@ -4,6 +4,7 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/oneuldorak_new/',
   plugins: [react(), svgr()],
   server: {
     host: '127.0.0.1',

@@ -118,7 +118,7 @@ function BottomNav() {
     if (!navElement) return
 
     const updateWidth = () => {
-      setShapeWidth(navElement.getBoundingClientRect().width - NAV_SHAPE_HORIZONTAL_INSET)
+      setShapeWidth(navElement.clientWidth - NAV_SHAPE_HORIZONTAL_INSET)
     }
 
     updateWidth()

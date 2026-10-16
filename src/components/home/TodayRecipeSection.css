@@ -236,13 +236,13 @@
 
 
 .saved-recipe__arrow {
-  width: clamp(20px, 5.5vw, 24px);
-  height: clamp(20px, 5.5vw, 24px);
+  width: clamp(20px, 5.5cqw, 24px);
+  height: clamp(20px, 5.5cqw, 24px);
   object-fit: contain;
   flex-shrink: 0;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .recipe-sec {
     padding: 30px 14px 8px;
   }
@@ -259,7 +259,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@container app (min-width: 768px) {
   .recipe-sec {
     padding: 40px 40px 8px;
   }

@@ -294,7 +294,7 @@
   transform: rotate(90deg) scale(0.86);
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .community-write-info-row,
   .community-write-select-row,
   .community-write-inline-row,

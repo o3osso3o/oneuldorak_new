@@ -1,4 +1,5 @@
-import { Suspense, lazy, startTransition, useEffect, useState, type ComponentType } from 'react'
+import { observePreviewLayout } from './components/common/layout/previewLayout'
+import { Suspense, lazy, startTransition, useEffect, useLayoutEffect, useState, type ComponentType } from 'react'
 import type { BottomNavRoute } from './components/common/layout/BottomNav'
 
 type AppRoute =
@@ -302,6 +303,7 @@ function setRouteThemeColor(color: string) {
 }
 
 function App() {
+  useLayoutEffect(observePreviewLayout, [])
   const [route, setRoute] = useState(getRouteFromHash)
   const Page = pages[route]
 

@@ -109,14 +109,14 @@
   cursor: pointer;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .mypage {
     padding-right: 16px;
     padding-left: 16px;
   }
 }
 
-@media (max-width: 320px) {
+@container app (max-width: 320px) {
   .mypage {
     padding-right: 12px;
     padding-left: 12px;
@@ -131,7 +131,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@container app (min-width: 768px) {
   .mypage {
     padding: 0 40px 56px;
   }

@@ -6,8 +6,8 @@
 
 .onboarding-intro-visual img {
   display: block;
-  width: min(72vw, 292px);
-  max-height: min(34dvh, 264px);
+  width: min(72cqw, 292px);
+  max-height: min(34cqh, 264px);
   height: auto;
   object-fit: contain;
 }

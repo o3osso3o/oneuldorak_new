@@ -1,3 +1,4 @@
+import { getAppScale } from '../../common/layout/previewLayout'
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { readGroceryShoppingItems, saveGroceryShoppingItems } from '../../common/aiDataHub'
@@ -80,10 +81,11 @@ export default function MenuAddSheet({ open, onClose, onMenuAdd }: Props) {
       return
     }
 
-    const startX = btnRect.left - containerRect.left + btnRect.width / 2
-    const startY = btnRect.top - containerRect.top + btnRect.height / 2
-    const endX = linkRect.left - containerRect.left + linkRect.width / 2
-    const endY = linkRect.top - containerRect.top + linkRect.height / 2
+    const scale = getAppScale()
+    const startX = (btnRect.left - containerRect.left + btnRect.width / 2) / scale
+    const startY = (btnRect.top - containerRect.top + btnRect.height / 2) / scale
+    const endX = (linkRect.left - containerRect.left + linkRect.width / 2) / scale
+    const endY = (linkRect.top - containerRect.top + linkRect.height / 2) / scale
 
     setFlyingItem({
       image: ingredient.image,

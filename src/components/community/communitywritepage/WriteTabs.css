@@ -65,7 +65,7 @@
   background: var(--color-primary);
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .community-write-tabs button {
     font-size: 17px;
   }

@@ -54,7 +54,7 @@
   transform-origin: center bottom;
   display: block;
   width: auto;
-  height: min(36vw, 220px);
+  height: min(36cqw, 220px);
   max-width: min(75%, 580px);
   margin: 0 auto -10px;
   position: relative;
@@ -68,7 +68,7 @@
   pointer-events: none;
 }
 
-@media (min-width: 768px) {
+@container app (min-width: 768px) {
   .recipe-hero {
     padding: 0 40px;
   }

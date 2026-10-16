@@ -63,8 +63,8 @@
 }
 
 .recipe-page .popular-recipe-card {
-  flex: 0 0 clamp(200px, 52vw, 240px);
-  height: clamp(300px, 76vw, 330px);
+  flex: 0 0 clamp(200px, 52cqw, 240px);
+  height: clamp(300px, 76cqw, 330px);
   border-radius: 8px;
 }
 
@@ -159,7 +159,7 @@
   flex: 0 0 auto;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .recipe-page__body {
     padding-right: 16px;
     padding-left: 16px;

@@ -244,7 +244,7 @@
   overflow-wrap: anywhere;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .chatbot-recipe-card {
     padding: 12px;
   }

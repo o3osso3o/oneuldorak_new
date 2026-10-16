@@ -429,7 +429,7 @@ article.vote-result-item {
   font-size: 20px;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .vote-card {
     padding: 16px;
   }
@@ -444,7 +444,7 @@ article.vote-result-item {
   }
 }
 
-@media (min-width: 600px) {
+@container app (min-width: 600px) {
   .vote-featured-section {
     padding-top: 0;
   }

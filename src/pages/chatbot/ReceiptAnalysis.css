@@ -54,8 +54,8 @@
 
 .receipt-analysis-intro-stack.is-fullscreen {
   min-height: calc(100% - 44px - var(--receipt-space-header-bottom));
-  padding-top: clamp(18px, 3.8vh, 32px);
-  padding-bottom: clamp(10px, 2vh, 16px);
+  padding-top: clamp(18px, 3.8cqh, 32px);
+  padding-bottom: clamp(10px, 2cqh, 16px);
   box-sizing: border-box;
 }
 
@@ -669,14 +669,14 @@
   line-height: 1;
 }
 
-@media (min-width: 560px) {
+@container app (min-width: 560px) {
   .receipt-analysis-page {
     width: min(100%, 520px);
     margin: 0 auto;
   }
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .receipt-analysis-page {
     padding-right: 16px;
     padding-left: 16px;
@@ -704,7 +704,7 @@
   }
 }
 
-@media (max-height: 780px) {
+@container app (max-height: 780px) {
   .receipt-analysis-intro-stack.is-fullscreen {
     padding-top: 12px;
     padding-bottom: 8px;

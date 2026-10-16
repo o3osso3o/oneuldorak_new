@@ -9,7 +9,7 @@
 }
 
 .coverflow-swiper__slide {
-  width: clamp(210px, 70vw, 250px);
+  width: clamp(210px, 70cqw, 250px);
   transition: opacity 0.25s ease;
   opacity: 0.56;
 }
@@ -40,7 +40,7 @@
 .coverflow-swiper__image {
   display: block;
   width: 100%;
-  height: clamp(160px, 45vw, 205px);
+  height: clamp(160px, 45cqw, 205px);
   object-fit: cover;
 }
 

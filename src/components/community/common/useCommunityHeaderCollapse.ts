@@ -40,7 +40,7 @@ function useCommunityHeaderCollapse() {
     // 커뮤니티 헤더 실제 높이를 측정해서 rootMargin으로 사용
     // → compact 트리거가 탭이 sticky되는 타이밍과 정확히 맞아떨어짐
     const headerHeight = stickyHeaderRef.current
-      ? Math.round(stickyHeaderRef.current.getBoundingClientRect().height)
+      ? stickyHeaderRef.current.offsetHeight
       : 68
 
     // Expose exact measured height as a CSS variable so CommunityStickyHeader

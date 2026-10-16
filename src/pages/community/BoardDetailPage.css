@@ -571,7 +571,7 @@
   display: none;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .board-detail-content {
     padding-right: 16px;
     padding-left: 16px;

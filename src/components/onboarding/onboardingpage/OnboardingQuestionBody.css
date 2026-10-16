@@ -45,7 +45,7 @@
 .onboarding-question__media {
   display: flex;
   flex: 0 0 auto;
-  min-height: clamp(190px, 32dvh, 260px);
+  min-height: clamp(190px, 32cqh, 260px);
   align-items: center;
   justify-content: center;
   margin: 24px 0 0;
@@ -54,15 +54,15 @@
 
 .onboarding-question__media img {
   display: block;
-  width: min(40vw, 155px);
-  max-height: min(24dvh, 168px);
+  width: min(40cqw, 155px);
+  max-height: min(24cqh, 168px);
   height: auto;
   object-fit: contain;
 }
 
 .onboarding-question__content--time .onboarding-question__media img {
-  width: min(60vw, 225px);
-  max-height: min(28dvh, 198px);
+  width: min(60cqw, 225px);
+  max-height: min(28cqh, 198px);
 }
 
 .onboarding-question__content--grid .onboarding-question__media {
@@ -71,12 +71,12 @@
 }
 
 .onboarding-question__content--grid .onboarding-question__media img {
-  width: min(40vw, 155px);
+  width: min(40cqw, 155px);
 }
 
 .onboarding-question__content--avoidFoods .onboarding-question__media img {
-  width: min(49vw, 190px);
-  max-height: min(24dvh, 170px);
+  width: min(49cqw, 190px);
+  max-height: min(24cqh, 170px);
 }
 
 .onboarding-question__content--avoidFoods .onboarding-question__multiple-hint {
@@ -112,14 +112,14 @@
   min-height: 0;
 }
 
-@media (max-height: 780px) {
+@container app (max-height: 780px) {
   .onboarding-question__media {
     min-height: 170px;
     margin: 18px 0 0;
   }
 
   .onboarding-question__media img {
-    width: min(38vw, 155px);
-    max-height: min(18dvh, 140px);
+    width: min(38cqw, 155px);
+    max-height: min(18cqh, 140px);
   }
 }

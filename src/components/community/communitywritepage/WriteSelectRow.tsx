@@ -1,3 +1,4 @@
+import { getAppScale } from '../../common/layout/previewLayout'
 import { useEffect, useRef, useState } from 'react'
 import WriteTopIcon from './WriteTopIcon'
 import './WriteFormCommon.css'
@@ -39,7 +40,7 @@ function WriteSelectRow({ label, value, options, placeholder = '선택해주세�
       const containerBottom = scrollable === document.documentElement
         ? window.innerHeight
         : scrollable.getBoundingClientRect().bottom
-      const gap = containerBottom - elBottom - 16
+      const gap = (containerBottom - elBottom) / getAppScale() - 16
       if (gap < 200) {
         scrollable.scrollBy({ top: 200 - gap, behavior: 'smooth' })
       }

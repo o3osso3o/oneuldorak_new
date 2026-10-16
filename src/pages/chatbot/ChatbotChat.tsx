@@ -1,3 +1,4 @@
+import { getAppScale } from '../../components/common/layout/previewLayout'
 import { useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent, type UIEvent } from 'react'
 import type { ChatMessage } from '../../types/chatbot'
 import { appendChatbotFridgeIngredients, appendChatbotHistoryMessage } from '../../components/common/aiDataHub'
@@ -1657,7 +1658,7 @@ function ChatbotChat() {
         const containerRect = container.getBoundingClientRect()
         const msgRect = lastUserMsg.getBoundingClientRect()
         container.scrollTo({
-          top: container.scrollTop + (msgRect.top - containerRect.top) - 16,
+          top: container.scrollTop + (msgRect.top - containerRect.top) / getAppScale() - 16,
           behavior: 'smooth',
         })
       })

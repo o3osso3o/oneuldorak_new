@@ -7,9 +7,9 @@
   --onboarding-safe-top: env(safe-area-inset-top, 0px);
   --onboarding-safe-bottom: env(safe-area-inset-bottom, 0px);
   --onboarding-pad-x: 23px;
-  --onboarding-pad-top: max(clamp(42px, 8dvh, 96px), calc(18px + var(--onboarding-safe-top)));
-  --onboarding-pad-bottom: max(clamp(22px, 4dvh, 34px), calc(12px + var(--onboarding-safe-bottom)));
-  --onboarding-content-width: clamp(430px, 70vw, 680px);
+  --onboarding-pad-top: max(clamp(42px, 8cqh, 96px), calc(18px + var(--onboarding-safe-top)));
+  --onboarding-pad-bottom: max(clamp(22px, 4cqh, 34px), calc(12px + var(--onboarding-safe-bottom)));
+  --onboarding-content-width: clamp(430px, 70cqw, 680px);
 
   box-sizing: border-box;
   display: flex;
@@ -30,12 +30,12 @@
 
 .onboarding-page--intro {
   --onboarding-pad-x: 24px;
-  --onboarding-pad-top: max(clamp(22px, 4.8dvh, 48px), calc(14px + var(--onboarding-safe-top)));
-  --onboarding-pad-bottom: max(clamp(20px, 4dvh, 34px), calc(12px + var(--onboarding-safe-bottom)));
-  --onboarding-content-width: clamp(430px, 64vw, 620px);
+  --onboarding-pad-top: max(clamp(22px, 4.8cqh, 48px), calc(14px + var(--onboarding-safe-top)));
+  --onboarding-pad-bottom: max(clamp(20px, 4cqh, 34px), calc(12px + var(--onboarding-safe-bottom)));
+  --onboarding-content-width: clamp(430px, 64cqw, 620px);
 
   justify-content: center;
-  gap: clamp(8px, 1.6dvh, 16px);
+  gap: clamp(8px, 1.6cqh, 16px);
 }
 
 .onboarding-page--intro .onboarding-intro-copy {
@@ -43,13 +43,13 @@
 }
 
 .onboarding-page--intro .onboarding-intro-actions {
-  margin-top: clamp(16px, 3dvh, 28px);
+  margin-top: clamp(16px, 3cqh, 28px);
   padding-top: 0;
 }
 
 .onboarding-page--question {
-  --onboarding-pad-top: max(clamp(24px, 5dvh, 56px), calc(16px + var(--onboarding-safe-top)));
-  --onboarding-pad-bottom: max(clamp(108px, 15dvh, 140px), calc(96px + var(--onboarding-safe-bottom)));
+  --onboarding-pad-top: max(clamp(24px, 5cqh, 56px), calc(16px + var(--onboarding-safe-top)));
+  --onboarding-pad-bottom: max(clamp(108px, 15cqh, 140px), calc(96px + var(--onboarding-safe-bottom)));
 
   position: relative;
   justify-content: flex-start;
@@ -67,18 +67,18 @@
 }
 
 .onboarding-page--ingredients {
-  --onboarding-pad-bottom: max(clamp(112px, 16dvh, 148px), calc(100px + var(--onboarding-safe-bottom)));
-  --onboarding-content-width: clamp(620px, 76vw, 760px);
+  --onboarding-pad-bottom: max(clamp(112px, 16cqh, 148px), calc(100px + var(--onboarding-safe-bottom)));
+  --onboarding-content-width: clamp(620px, 76cqw, 760px);
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
+@container app (min-width: 768px) {
   .onboarding-page {
-    --onboarding-pad-x: clamp(32px, 5vw, 48px);
+    --onboarding-pad-x: clamp(32px, 5cqw, 48px);
   }
 
   .onboarding-page--intro {
-    --onboarding-pad-x: clamp(32px, 5vw, 48px);
+    --onboarding-pad-x: clamp(32px, 5cqw, 48px);
   }
 
   .onboarding-page--intro .onboarding-intro-copy {
@@ -87,48 +87,69 @@
   }
 }
 
-@media (max-height: 780px) {
+@container app (max-height: 780px) {
   .onboarding-page {
-    --onboarding-pad-top: max(clamp(30px, 6dvh, 64px), calc(12px + var(--onboarding-safe-top)));
-    --onboarding-pad-bottom: max(clamp(16px, 3dvh, 24px), calc(8px + var(--onboarding-safe-bottom)));
+    --onboarding-pad-top: max(clamp(30px, 6cqh, 64px), calc(12px + var(--onboarding-safe-top)));
+    --onboarding-pad-bottom: max(clamp(16px, 3cqh, 24px), calc(8px + var(--onboarding-safe-bottom)));
   }
 
   .onboarding-page--intro {
     justify-content: center;
-    --onboarding-pad-top: max(clamp(16px, 3.6dvh, 28px), calc(10px + var(--onboarding-safe-top)));
-    --onboarding-pad-bottom: max(clamp(14px, 2.8dvh, 22px), calc(8px + var(--onboarding-safe-bottom)));
-    gap: clamp(6px, 1.2dvh, 12px);
+    --onboarding-pad-top: max(clamp(16px, 3.6cqh, 28px), calc(10px + var(--onboarding-safe-top)));
+    --onboarding-pad-bottom: max(clamp(14px, 2.8cqh, 22px), calc(8px + var(--onboarding-safe-bottom)));
+    gap: clamp(6px, 1.2cqh, 12px);
   }
 
   .onboarding-page--intro .onboarding-intro-actions {
-    margin-top: clamp(10px, 2dvh, 18px);
+    margin-top: clamp(10px, 2cqh, 18px);
     padding-top: 0;
   }
 
   .onboarding-page--question {
-    --onboarding-pad-top: max(clamp(16px, 3.2dvh, 34px), calc(10px + var(--onboarding-safe-top)));
+    --onboarding-pad-top: max(clamp(16px, 3.2cqh, 34px), calc(10px + var(--onboarding-safe-top)));
   }
 
   .onboarding-page--question:not(.onboarding-page--ingredients) {
-    --onboarding-pad-bottom: max(clamp(56px, 6.8dvh, 66px), calc(48px + var(--onboarding-safe-bottom)));
+    --onboarding-pad-bottom: max(clamp(56px, 6.8cqh, 66px), calc(48px + var(--onboarding-safe-bottom)));
   }
 
   .onboarding-page--ingredients {
-    --onboarding-pad-bottom: max(clamp(100px, 14dvh, 120px), calc(88px + var(--onboarding-safe-bottom)));
+    --onboarding-pad-bottom: max(clamp(100px, 14cqh, 120px), calc(88px + var(--onboarding-safe-bottom)));
   }
 }
 
-@media (max-height: 680px) {
+@container app (max-height: 680px) {
   .onboarding-page {
-    --onboarding-pad-top: max(clamp(18px, 4dvh, 34px), calc(8px + var(--onboarding-safe-top)));
-    --onboarding-pad-bottom: max(clamp(12px, 2.4dvh, 18px), calc(6px + var(--onboarding-safe-bottom)));
+    --onboarding-pad-top: max(clamp(18px, 4cqh, 34px), calc(8px + var(--onboarding-safe-top)));
+    --onboarding-pad-bottom: max(clamp(12px, 2.4cqh, 18px), calc(6px + var(--onboarding-safe-bottom)));
   }
 
   .onboarding-page--question:not(.onboarding-page--ingredients) {
-    --onboarding-pad-bottom: max(clamp(52px, 6.2dvh, 60px), calc(44px + var(--onboarding-safe-bottom)));
+    --onboarding-pad-bottom: max(clamp(52px, 6.2cqh, 60px), calc(44px + var(--onboarding-safe-bottom)));
   }
 
   .onboarding-page--ingredients {
-    --onboarding-pad-bottom: max(clamp(92px, 13dvh, 108px), calc(80px + var(--onboarding-safe-bottom)));
+    --onboarding-pad-bottom: max(clamp(92px, 13cqh, 108px), calc(80px + var(--onboarding-safe-bottom)));
   }
+}
+
+/* Keep question actions stationary while long answers scroll on short screens. */
+.onboarding-page--question:not(.onboarding-page--ingredients) .onboarding-question__content {
+  overflow: hidden auto;
+  overscroll-behavior-y: contain;
+}
+
+.onboarding-page--intro {
+  justify-content: safe center;
+  overflow: hidden auto;
+}
+
+.onboarding-page--intro > * {
+  flex-shrink: 0;
+}
+
+.onboarding-complete-screen {
+  height: 100%;
+  overflow: hidden auto;
+  align-items: safe center;
 }

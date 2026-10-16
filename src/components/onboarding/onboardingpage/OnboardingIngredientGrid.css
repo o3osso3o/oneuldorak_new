@@ -142,13 +142,13 @@
   }
 }
 
-@media (max-height: 780px) {
+@container app (max-height: 780px) {
   .onboarding-ingredient-grid {
     gap: 16px 16px;
   }
 }
 
-@media (min-width: 768px) {
+@container app (min-width: 768px) {
   .onboarding-ingredient-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 18px 14px;

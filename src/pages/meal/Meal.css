@@ -120,7 +120,7 @@
 
 
 /* ── 반응형 ──────────────────────────── */
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .meal-hero {
     padding: 16px 14px 24px;
   }
@@ -146,7 +146,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@container app (max-width: 320px) {
   .meal-hero__name {
     font-size: 18px;
   }
@@ -159,7 +159,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@container app (min-width: 768px) {
   .meal-hero {
     padding: 28px 40px 36px;
   }

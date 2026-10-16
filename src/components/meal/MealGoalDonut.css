@@ -26,7 +26,7 @@
   line-height: 1;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .meal-goal-donut {
     width: 84px;
     height: 84px;
@@ -38,7 +38,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@container app (max-width: 320px) {
   .meal-goal-donut {
     width: 76px;
     height: 76px;
@@ -54,7 +54,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@container app (min-width: 768px) {
   .meal-goal-donut {
     width: 132px;
     height: 132px;

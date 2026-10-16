@@ -36,7 +36,7 @@ function VoteToast({ message, onDismiss }: VoteToastProps) {
     <div className={`vote-toast${isHiding ? ' vote-toast--hiding' : ''}`} role="status" aria-live="polite">
       {message}
     </div>,
-    document.body
+    document.getElementById('root')!
   )
 }
 

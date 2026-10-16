@@ -139,7 +139,7 @@
   color: #ff5a5f;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .recipe-share-card {
     grid-template-columns: 104px minmax(0, 1fr);
     gap: 10px;

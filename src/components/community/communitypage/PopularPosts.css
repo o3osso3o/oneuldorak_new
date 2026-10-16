@@ -245,7 +245,7 @@
   }
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .community-hot-posts__stagger .sequential-highlight-list__item {
     grid-template-columns: 18px 40px minmax(0, 1fr);
     gap: 10px;

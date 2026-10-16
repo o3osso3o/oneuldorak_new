@@ -30,7 +30,7 @@
 }
 
 .community-banner-header__search-inline {
-  width: min(189px, 48.5vw);
+  width: min(189px, 48.5cqw);
   margin-right: 2px;
 }
 
@@ -73,7 +73,7 @@
   background: var(--color-bg-base);
 }
 
-@media (min-width: 600px) {
+@container app (min-width: 600px) {
   .community-content {
     padding-right: 24px;
     padding-left: 24px;

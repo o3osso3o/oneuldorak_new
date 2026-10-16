@@ -271,7 +271,7 @@
   align-self: flex-end;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .free-post-card h2 {
     font-size: 18px;
   }

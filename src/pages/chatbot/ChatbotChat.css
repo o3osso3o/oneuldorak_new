@@ -250,7 +250,7 @@
   --chatbot-ai-tail-height: 22px;
   position: relative;
   width: fit-content;
-  max-width: min(74vw, 300px);
+  max-width: min(74cqw, 300px);
   min-height: 0;
   margin-bottom: 0;
   border: 1px solid var(--green-blue-blue10, #E6EDFF);
@@ -298,7 +298,7 @@
 }
 
 .chatbot-ai-stack {
-  width: min(82vw, 340px);
+  width: min(82cqw, 340px);
   max-width: min(82%, 340px);
   display: flex;
   flex-direction: column;
@@ -307,23 +307,23 @@
 }
 
 .chatbot-msg--ai:not(.chatbot-msg--ai-loading):not(.chatbot-msg--ai-judge) .chatbot-ai-stack {
-  --chatbot-ai-card-shift: clamp(48px, 12vw, 64px);
+  --chatbot-ai-card-shift: clamp(48px, 12cqw, 64px);
 }
 
 .chatbot-msg--ai:not(.chatbot-msg--ai-loading):not(.chatbot-msg--ai-judge) .chatbot-ai-stack--recipe {
-  --chatbot-recipe-card-shift: clamp(24px, 6vw, 34px);
+  --chatbot-recipe-card-shift: clamp(24px, 6cqw, 34px);
 }
 
 .chatbot-msg--ai:not(.chatbot-msg--ai-loading):not(.chatbot-msg--ai-judge) .chatbot-ai-stack--recipe .chatbot-recipe-card {
   width: min(100%, 350px);
-  max-width: calc(100vw - 44px);
+  max-width: calc(100cqw - 44px);
   margin: 20px 0 12px;
   transform: translateX(calc(var(--chatbot-recipe-card-shift) * -1));
 }
 
 .chatbot-ai-stack--judge {
   width: min(100%, 396px);
-  max-width: calc(100vw - 32px);
+  max-width: calc(100cqw - 32px);
   gap: 12px;
   margin-top: 20px;
   margin-left: 0;
@@ -331,7 +331,7 @@
 
 .chatbot-ai-stack--judge .chatbot-ai-bubble {
   --chatbot-ai-tail-bottom: 18px;
-  max-width: min(74vw, 300px);
+  max-width: min(74cqw, 300px);
 }
 
 .chatbot-ai-judge-head .chatbot-ai-bubble {
@@ -346,14 +346,14 @@
 }
 
 .chatbot-ai-stack--recipe {
-  width: min(88vw, 350px);
+  width: min(88cqw, 350px);
   max-width: min(92%, 350px);
   gap: 10px;
 }
 
 .chatbot-ai-detail-card {
   width: calc(100% + var(--chatbot-ai-card-shift, 0px));
-  max-width: calc(100vw - 44px);
+  max-width: calc(100cqw - 44px);
   box-sizing: border-box;
   margin-top: 20px;
   margin-left: calc(var(--chatbot-ai-card-shift, 0px) * -1);
@@ -493,7 +493,7 @@
   --chatbot-ai-tail-height: 16px;
 
   min-height: 40px;
-  max-width: min(72vw, 260px);
+  max-width: min(72cqw, 260px);
   display: flex;
   align-items: center;
   border-radius: 22px;
@@ -1307,7 +1307,7 @@
 .chatbot-fridge-loading,
 .chatbot-fridge-result-modal,
 .chatbot-fridge-saved-modal {
-  width: min(300px, calc(100vw - 40px));
+  width: min(300px, calc(100cqw - 40px));
   height: min(433px, calc(100% - 32px));
   max-width: 100%;
   border-radius: 10px;

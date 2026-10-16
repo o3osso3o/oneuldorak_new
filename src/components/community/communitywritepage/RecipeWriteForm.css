@@ -44,7 +44,7 @@
   object-fit: contain;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .community-write-media + .community-write-recipe-info {
     margin-top: 16px;
   }

@@ -132,7 +132,7 @@ function VoteCompleteModal({
         </p>
       </section>
     </div>,
-    document.body
+    document.getElementById('root')!
   )
 }
 

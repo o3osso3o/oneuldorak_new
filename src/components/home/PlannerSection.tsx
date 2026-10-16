@@ -1,3 +1,4 @@
+import { getAppScale } from '../common/layout/previewLayout'
 import { useState, useRef, useMemo, useCallback } from 'react'
 import { weeklyMenuData } from '../meal/mealData'
 import GraphIcon from '../../assets/icons/graph_icon.svg?react'
@@ -52,11 +53,13 @@ function PlannerSection({ onDirectSelect }: Props) {
     const calRect = calBtnRef.current?.getBoundingClientRect()
 
     if (saveRect && calRect) {
+      const appRect = document.getElementById('root')!.getBoundingClientRect()
+      const scale = getAppScale()
       setFlyDot({
-        startX: saveRect.left + saveRect.width / 2,
-        startY: saveRect.top + saveRect.height / 2,
-        endX: calRect.left + calRect.width / 2,
-        endY: calRect.top + calRect.height / 2,
+        startX: (saveRect.left - appRect.left + saveRect.width / 2) / scale,
+        startY: (saveRect.top - appRect.top + saveRect.height / 2) / scale,
+        endX: (calRect.left - appRect.left + calRect.width / 2) / scale,
+        endY: (calRect.top - appRect.top + calRect.height / 2) / scale,
       })
       setTimeout(() => {
         setFlyDot(null)

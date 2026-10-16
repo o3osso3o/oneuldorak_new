@@ -133,7 +133,7 @@
   height: 44px;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .community-tabs {
     height: 76px;
     margin-top: -34px;

@@ -269,8 +269,8 @@
 
 /* 카드 오른쪽 화살표 */
 .wpp-menu-body > svg {
-  width: clamp(20px, 5.5vw, 24px);
-  height: clamp(20px, 5.5vw, 24px);
+  width: clamp(20px, 5.5cqw, 24px);
+  height: clamp(20px, 5.5cqw, 24px);
   flex-shrink: 0;
   margin-right: 6px;
 }

@@ -246,7 +246,7 @@
   pointer-events: none;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .ing-header {
     padding: 0 14px;
   }
@@ -260,7 +260,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@container app (max-width: 320px) {
   .ing-header {
     padding: 0 12px;
   }
@@ -287,7 +287,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@container app (min-width: 768px) {
   .ing-header {
     padding: 0 40px;
     margin-bottom: 24px;

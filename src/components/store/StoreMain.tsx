@@ -1,3 +1,4 @@
+import { getAppScale } from '../common/layout/previewLayout'
 import { useCallback, useRef, useState } from 'react'
 import './StoreMain.css'
 import StoreTopBar from './StoreTopBar'
@@ -68,10 +69,12 @@ function StoreMain({ onSelect }: Props) {
     const cartRect = cartBtnRef.current?.getBoundingClientRect()
     if (!cartRect) return
 
-    const startX = rect.left + rect.width / 2
-    const startY = rect.top + rect.height / 2
-    const endX = cartRect.left + cartRect.width / 2
-    const endY = cartRect.top + cartRect.height / 2
+    const appRect = document.getElementById('root')!.getBoundingClientRect()
+    const scale = getAppScale()
+    const startX = (rect.left - appRect.left + rect.width / 2) / scale
+    const startY = (rect.top - appRect.top + rect.height / 2) / scale
+    const endX = (cartRect.left - appRect.left + cartRect.width / 2) / scale
+    const endY = (cartRect.top - appRect.top + cartRect.height / 2) / scale
     const id = ++flyIdRef.current
 
     setFlyDots(prev => [...prev, { id, x: startX, y: startY, dx: endX - startX, dy: endY - startY }])

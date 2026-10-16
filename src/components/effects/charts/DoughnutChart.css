@@ -2,8 +2,8 @@
   position: relative;
   display: grid;
   place-items: center;
-  flex: 0 0 clamp(76px, 25vw, 92px);
-  width: clamp(76px, 25vw, 92px);
+  flex: 0 0 clamp(76px, 25cqw, 92px);
+  width: clamp(76px, 25cqw, 92px);
   aspect-ratio: 1;
   min-width: 76px;
   min-height: 76px;

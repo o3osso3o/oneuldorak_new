@@ -34,7 +34,7 @@ function VoteConfirmModal({ isOpen, onCancel, onConfirm }: VoteConfirmModalProps
         </div>
       </section>
     </div>,
-    document.body
+    document.getElementById('root')!
   )
 }
 

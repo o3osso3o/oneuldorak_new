@@ -1,3 +1,4 @@
+import { getAppScale } from '../../common/layout/previewLayout'
 import { useRef, useState } from 'react'
 import dorakcrewBannerImg from '../images/dorak_happy.svg'
 import { RECOMMEND_ITEMS } from './groceryData'
@@ -29,14 +30,16 @@ function GroceryRecommendTab({ onAddItem }: Props) {
     if (!tabEl) { onAddItem(item); return }
     const tabRect = tabEl.getBoundingClientRect()
 
+    const appRect = document.getElementById('root')!.getBoundingClientRect()
+    const scale = getAppScale()
     const id = ++nextId
     const bubble: Bubble = {
       id,
       image: item.image,
-      sx: btnRect.left + btnRect.width / 2,
-      sy: btnRect.top + btnRect.height / 2,
-      ex: tabRect.left + tabRect.width / 2,
-      ey: tabRect.top + tabRect.height / 2,
+      sx: (btnRect.left - appRect.left + btnRect.width / 2) / scale,
+      sy: (btnRect.top - appRect.top + btnRect.height / 2) / scale,
+      ex: (tabRect.left - appRect.left + tabRect.width / 2) / scale,
+      ey: (tabRect.top - appRect.top + tabRect.height / 2) / scale,
       flying: false,
     }
 

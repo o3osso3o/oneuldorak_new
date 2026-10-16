@@ -41,7 +41,7 @@
   box-shadow: 4px 4px 0 #ffdb78;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .quick-grid {
     gap: 6px;
   }
@@ -51,7 +51,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@container app (max-width: 320px) {
   .quick-card__icon {
     width: 52px;
     height: 52px;
@@ -62,7 +62,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@container app (min-width: 768px) {
   .quick-section {
     padding: 36px 40px;
   }

@@ -137,7 +137,7 @@
   font-weight: 800;
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .community-write-option-row input {
     height: 40px;
   }

@@ -58,8 +58,8 @@
 
 .popular-recipe-card {
   position: relative;
-  flex: 0 0 clamp(178px, 48vw, 230px);
-  height: clamp(218px, 58vw, 286px);
+  flex: 0 0 clamp(178px, 48cqw, 230px);
+  height: clamp(218px, 58cqw, 286px);
   overflow: hidden;
   border-radius: 14px;
   background: #ececec;
@@ -174,7 +174,7 @@
   filter: brightness(0) invert(1);
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .recipe-section__header h2 {
     font-size: 22px;
   }

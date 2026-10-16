@@ -1,5 +1,5 @@
 .onboarding-intro-copy {
-  margin: clamp(20px, 4svh, 42px) 25px 0;
+  margin: clamp(20px, 4cqh, 42px) 25px 0;
   color: #1a1a1a;
   font-family: 'Pretendard Variable', sans-serif;
   letter-spacing: 0;

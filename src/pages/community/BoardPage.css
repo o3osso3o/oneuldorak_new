@@ -40,7 +40,7 @@
   background: var(--color-bg-base);
 }
 
-@media (max-width: 360px) {
+@container app (max-width: 360px) {
   .free-detail-body {
     padding-right: 16px;
     padding-left: 16px;
