@@ -1,3 +1,4 @@
+import PreviewControls from './components/common/layout/PreviewControls'
 import { observePreviewLayout } from './components/common/layout/previewLayout'
 import { Suspense, lazy, startTransition, useEffect, useLayoutEffect, useState, type ComponentType } from 'react'
 import type { BottomNavRoute } from './components/common/layout/BottomNav'
@@ -305,6 +306,7 @@ function setRouteThemeColor(color: string) {
 function App() {
   useLayoutEffect(observePreviewLayout, [])
   const [route, setRoute] = useState(getRouteFromHash)
+  const [onboardingRun, setOnboardingRun] = useState(0)
   const Page = pages[route]
 
   useEffect(() => {
@@ -350,9 +352,15 @@ function App() {
   }, [route])
 
   return (
-    <Suspense fallback={<RouteFallback route={route} />}>
-      <Page />
-    </Suspense>
+    <>
+      <PreviewControls onReplayOnboarding={() => {
+        setOnboardingRun((run) => run + 1)
+        window.location.hash = '#/start'
+      }} />
+      <Suspense fallback={<RouteFallback route={route} />}>
+        <Page key={route === 'start' ? onboardingRun : undefined} />
+      </Suspense>
+    </>
   )
 }
 

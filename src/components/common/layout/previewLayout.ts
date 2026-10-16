@@ -11,12 +11,14 @@ export function observePreviewLayout() {
     const isDesktop = getComputedStyle(frame).getPropertyValue('--desktop-preview').trim() === '1'
     if (!isDesktop) {
       frame.style.removeProperty('--preview-scale')
+      document.body.style.removeProperty('--preview-half-width')
       return
     }
     const scale = calculatePreviewScale(
       document.body.clientWidth, document.body.clientHeight, frame.offsetWidth, frame.offsetHeight,
     )
     frame.style.setProperty('--preview-scale', String(scale))
+    document.body.style.setProperty('--preview-half-width', `${frame.offsetWidth * scale / 2}px`)
   }
 
   update()
@@ -28,6 +30,7 @@ export function observePreviewLayout() {
     observer.disconnect()
     window.removeEventListener('resize', update)
     frame.style.removeProperty('--preview-scale')
+    document.body.style.removeProperty('--preview-half-width')
   }
 }
 
