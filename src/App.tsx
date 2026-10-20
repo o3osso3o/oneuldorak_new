@@ -179,7 +179,7 @@ const routeThemeColors = {
   onboarding: '#fffbea',
   home: '#ffdb78',
   meal: '#ffdb78',
-  community: '#ffffff',
+  community: '#ffdb78',
   store: '#ffffff',
   recipe: '#ffffff',
   'recipe-write': '#fffdf7',
