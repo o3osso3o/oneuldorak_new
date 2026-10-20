@@ -51,7 +51,7 @@ export async function requestAiChat(request: AiChatRequest): Promise<AiChatRespo
       source: 'mock',
       feature,
       mockStatus,
-      reason: normalizedRequest.forceMock ? 'forceMock' : 'VITE_USE_MOCK_AI=true',
+      reason: normalizedRequest.forceMock ? 'forceMock' : 'mock-only mode',
     })
     return createMockAiChatResponse(normalizedRequest, feature, mockStatus)
   }

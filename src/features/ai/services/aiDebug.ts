@@ -1,11 +1,8 @@
 import type { AiChatRequest } from '../types/ai.types'
 import { inferAiFeature } from './aiFeatureRouter'
+import { shouldUseMockAi } from './aiConfig'
 
 const AI_DEBUG_PREFIX = '[oneuldorak-ai]'
-
-function shouldUseMockAi() {
-  return import.meta.env.VITE_USE_MOCK_AI === 'true'
-}
 
 function shouldLogAiDebug() {
   return import.meta.env.DEV || import.meta.env.VITE_DEBUG_AI === 'true'
